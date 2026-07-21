@@ -7,7 +7,7 @@ A simple portfolio website using only HTML
 
 ### The goals of this project are:
 
-Create multiple pages on a website.
+Create multiple sections on a website with navigation.
 
 Structure semantically using HTML.
 
