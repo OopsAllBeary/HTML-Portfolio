@@ -9,13 +9,84 @@
         <meta property="og:description" content="A simple HTML-only portfolio website.">
         <meta property="og:image" content="https://placehold.co/600x400">
         <link rel="icon" type="image/x-icon" href="https://favicon.cc">
+        <style>
+            .header-content {
+                display: flex;
+                justify-content: space-between;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                background-color: white;
+                padding: 10px 20px;
+                border-bottom: 2px solid black;
+                z-index: 1000;
+            }
+            
+            nav ul {
+                display: flex;
+                list-style-type: none;
+                margin: 20px 30px;
+                padding: 0;
+                gap: 20px;
+            }
+            
+            #home {
+                display: flex;
+                flex-direction: column;
+                height: 600px;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                border: 2px solid black;
+            }
+            
+            #projects {
+                margin: 0;
+            }
+            
+            .multi-columns {
+                display: flex;
+                flex-wrap: nowrap;
+                width: 100%;
+            }
+            
+            .projects, .experience, .education {
+                flex: 1;
+                border: 2px solid black;
+                padding: 20px;
+            }
+            
+            .experience ul, .education ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            
+            .experience li, .education li {
+                margin-bottom: 20px;
+            }
+            
+            .experience h4, .education h4 {
+                padding: 0;
+                font-size: 16px;
+                margin: 0;
+            }
+            
+            .experience p, .education p {
+                padding: 0;
+                margin: 0;
+            }
+            
+            .education span {
+                color: #3a74cf;
+            }
+        </style>
     </head>
     <body>
         <header>
-            <div class="header-content" style="display: flex; justify-content: space-between; position: fixed; top: 0; width: 100%; background-color: white; padding: 10px 20px; border-bottom: 2px solid black; z-index: 1000;">
+            <div class="header-content">
                 <h3><a href="/">Bear</a></h3>
                 <nav>
-                    <ul style="display: flex; list-style-type: none; margin: 20px 30px; padding: 0; gap: 20px;">
+                    <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -23,39 +94,39 @@
                 </nav>
         </header>
         <body>
-            <section id="home" style="display: flex; flex-direction: column; height: 600px; justify-content: center; align-items: center; text-align: center; border: 2px solid black;">
+            <section id="home">
                 <h1>Front-End Developer</h1>
                 <p>This is a simple HTML-only portfolio website.</p>
             </section>
-            <section id="projects" style="margin: 0 20px">
-                <div class="multi-columns" style ="display: flex; flex-wrap: nowrap; gap: 20px;">
-                    <div class="projects" style="flex: 1; border: 2px solid black; padding: 20px;">
+            <section id="projects">
+                <div class="multi-columns">
+                    <div class="projects">
                         <h2>HTML only Projects</h2>
                         <ul>
                             <li><a href="https://github.com/OopsAllBeary/HTML-CV">HTML Only CV</a></li>
                             <li><a href="https://github.com/OopsAllBeary/HTML-Portfolio">HTML Only Portfolio</a></li>
                         </ul>
                     </div>
-                    <div class="experience" style="flex: 1; border: 2px solid black; padding: 20px;">
+                    <div class="experience">
                         <h2>Experience</h2>
-                        <ul style="list-style-type: none; padding: 0;">
-                            <li style="margin-bottom: 20px;"><h4 style="padding: 0; font-size: 16px; margin: 0;">Creative Technology Director</h4><p style="padding: 0; margin: 0;">Polygon Circus</p></li>
-                            <li style="margin-bottom: 20px;"><h4 style="padding: 0; font-size: 16px; margin: 0;">SVP, Creative Technology Director</h4><p style="padding: 0; margin: 0;">21GRAMS NY</p></li>
-                            <li style="margin-bottom: 20px;"><h4 style="padding: 0; font-size: 16px; margin: 0;">VP, Creative Technology Director</h4><p style="padding: 0; margin: 0;">Deutsch LA</p></li>
-                            <li style="margin-bottom: 20px;"><h4 style="padding: 0; font-size: 16px; margin: 0;">Senior Creative Technologist</h4><p style="padding: 0; margin: 0;">MaxMedia Technologies</p></li>
-                            <li style="margin-bottom: 20px;"><h4 style="padding: 0; font-size: 16px; margin: 0;">Senior Innovation Strategist</h4><p style="padding: 0; margin: 0;">Fitzco McCann</p></li>
-                            <li style="margin-bottom: 20px;"><h4 style="padding: 0; font-size: 16px; margin: 0;">Senior Creative Technologist | Innovation Lead</h4><p style="padding: 0; margin: 0;">BBDO NY</p></li>
+                        <ul>
+                            <li><h4>Creative Technology Director</h4><p>Polygon Circus</p></li>
+                            <li><h4>SVP, Creative Technology Director</h4><p>21GRAMS NY</p></li>
+                            <li><h4>VP, Creative Technology Director</h4><p>Deutsch LA</p></li>
+                            <li><h4>Senior Creative Technologist</h4><p>MaxMedia Technologies</p></li>
+                            <li><h4>Senior Innovation Strategist</h4><p>Fitzco McCann</p></li>
+                            <li><h4>Senior Creative Technologist | Innovation Lead</h4><p>BBDO NY</p></li>
                         </ul>
                     </div>
-                    <div class="education" style="flex: 1; border: 2px solid black; padding: 20px;">
+                    <div class="education">
                         <h2>Education</h2>
-                        <ul style="list-style-type: none; padding: 0;">
+                        <ul>
                             <li>
-                                <h4 style="padding: 0; font-size: 16px; margin: 0;"><span style="color: #3a74cf;">VCU Brandcenter </span>— Master's in Business | Creative Technology</h4>
+                                <h4><span>VCU Brandcenter </span>— Master's in Business | Creative Technology</h4>
                                 <p>Graduated: 2014</p>
                             </li>
                             <li>
-                                <h4 style="padding: 0; font-size: 16px; margin: 0;"><span style="color: #3a74cf;">Virginia Commonwealth University </span>— Bachelor's in Mass Communication | Creative Advertising</h4>
+                                <h4><span>Virginia Commonwealth University </span>— Bachelor's in Mass Communication | Creative Advertising</h4>
                                 <p>Graduated: 2011</p>
                             </li>
                         </ul>
