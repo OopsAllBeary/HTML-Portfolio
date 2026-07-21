@@ -75,11 +75,16 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
             }
 
             .formRow textarea {
                 width: 100%;
-                height: 100px;
+                min-height: 150px;
             }
 
             .formRow input, .formRow textarea {
